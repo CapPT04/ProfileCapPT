@@ -37,3 +37,6 @@ tl.from('.letter', 0.7, {
     },
     '-=1'
 )
+particlesJS.load('particles-js', 'js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
