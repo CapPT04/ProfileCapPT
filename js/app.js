@@ -40,3 +40,47 @@ tl.from('.letter', 0.7, {
 particlesJS.load('particles-js', 'js/particles.json', function() {
     console.log('callback - particles.js config loaded');
   });
+
+  //About Page
+  gsap.fromTo(".about_left", {
+    scale:0.2,
+    autoAlpha:0,
+    x:"-100%"
+  }, {
+    scale:1,
+    autoAlpha:1,
+    duration:1,
+    x:0,
+    scrollTrigger: {
+        trigger: ".about_left",
+        start: 'bottom bottom',
+        end: 'center center',
+        scrub: 1,
+
+    },
+  } 
+  )
+  gsap.utils.toArray(".about_right span").forEach((span) => {
+    gsap.fromTo(span, {
+        letterSpacing: "10px",
+        autoAlpha:0,
+        x:300,
+        skewX: 65,
+    },
+    {
+        letterSpacing: "0",
+        autoAlpha:1,
+        x:0,
+        skewX: 0,
+        duration:1,
+        scrollTrigger: {
+        trigger: span,
+        scrub: 1,
+        start: 'bottom bottom',
+        end: 'center center',
+        
+
+    }
+    })
+    
+  })
