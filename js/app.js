@@ -84,3 +84,33 @@ particlesJS.load('particles-js', 'js/particles.json', function() {
     })
     
   })
+
+  //SKILLS
+
+  gsap.fromTo(".skill_list",{
+    autoAlpha:0,
+    x:"-100%"
+  },
+  {
+    autoAlpha:1,
+    x:0,
+    duration:2, scrollTrigger:{
+        trigger: ".skill-list"
+    }
+  }) 
+
+  gsap.fromTo(
+    ".skill_right-list", {
+        autoAlpha:0,
+        x:"100%"
+    },
+    {
+        autoAlpha:1,
+        x:0,
+        duration:2,
+        stagger:0.5,
+        scrollTrigger:{
+            trigger: ".skill_right"
+        }
+    }
+  )
