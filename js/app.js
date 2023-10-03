@@ -114,3 +114,15 @@ particlesJS.load('particles-js', 'js/particles.json', function() {
         }
     }
   )
+  //Project 
+  gsap.fromTo(
+    ".project_card", 1, {
+        autoAlpha:0,
+    }, {
+        autoAlpha:1,
+        stagger:0.4,
+        scrollTrigger:{
+            trigger:".project_wrapper"
+    }
+}
+  )
